@@ -6,21 +6,24 @@ The goal is not to memorize diagrams. It is to show the reasoning used to turn a
 
 ## Design template
 
-Each design follows the same sequence:
+Each design follows the structure in [DESIGN_GUIDE.md](DESIGN_GUIDE.md):
 
-1. **Requirements** — functional and non-functional requirements.
-2. **Constraints** — scale, latency, availability, security and operational boundaries.
-3. **High-level architecture** — major components and their responsibilities.
-4. **Data/control flow** — what happens on the normal path.
-5. **Failure paths** — what happens when dependencies or infrastructure fail.
-6. **Observability** — signals needed to detect and diagnose problems.
-7. **Capacity and scaling** — where bottlenecks appear and how the system responds.
-8. **Trade-offs** — why one approach is selected over reasonable alternatives.
+1. **Problem and scope** — what is being built and what is out of scope.
+2. **Requirements** — functional and operational requirements.
+3. **Constraints and assumptions** — called out before choosing technologies.
+4. **Capacity and data flow** — scale dimensions and the normal path.
+5. **Architecture** — major components and ownership boundaries.
+6. **Failure modes** — what happens when dependencies fail.
+7. **Observability** — signals that distinguish healthy from merely running.
+8. **Security and authorization** — trust boundaries and sensitive actions.
+9. **Scaling and recovery** — independent scaling and return to known-good.
+10. **Trade-offs** — what was chosen, what was rejected, and why.
 
 ## Designs
 
 - [01 — Smart Parking](designs/01-smart-parking.md)
 - [02 — Health-aware deployment control](designs/02-health-aware-deployment-control.md)
+- [03 — Release safety and rollback](designs/03-release-safety-and-rollback.md)
 
 More designs will be added using the same format rather than as disconnected architecture diagrams.
 
